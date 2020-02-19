@@ -1,0 +1,3 @@
+<?php
+	header("Location: /20200219/atividade/php/form_agendamento.php");
+?>
