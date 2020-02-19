@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agendamentos>
+    <agendamento>
+        <nome>10</nome>
+        <email>10@gmail.com</email>
+        <telefone>10</telefone>
+        <data>0010-10-10</data>
+        <horas>10</horas>
+        <minutos>10</minutos>
+    </agendamento>
+<agendamento><nome>teste</nome><email>teste@teste.com</email><telefone>10</telefone><data>0010-10-10</data><horas>10</horas><minutos>0</minutos></agendamento><agendamento><nome>Yuri</nome><email>yurikanegae@gmail.com</email><telefone>123456789</telefone><data>0010-10-10</data><horas>17</horas><minutos>45</minutos></agendamento><agendamento><nome>Yuri</nome><email>yurikanegae@gmail.com</email><telefone>123456789</telefone><data>1111-11-11</data><horas>10:01</horas><minutos/></agendamento><agendamento><nome>Yuri</nome><email>yurikanegae@gmail.com</email><telefone>123456789</telefone><data>1111-11-11</data><horas>11:11</horas></agendamento><agendamento><nome>Jose</nome><email>jr.beluzo@email.com</email><telefone>123456789</telefone><data>2020-02-19</data><horas>08:15</horas></agendamento></agendamentos>
