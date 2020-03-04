@@ -49,6 +49,14 @@
                             19/02/2020
                         </th>
                     </tr>
+                    <tr>
+                        <th>
+                            <a href = "20200304/php/form_usuario.php">Checagem com javaScript</a>
+                        </th>
+                        <th>
+                            04/03/2020
+                        </th>
+                    </tr>
                 </tbody>
             </table>
         </div>
