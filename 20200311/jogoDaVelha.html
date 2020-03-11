@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+    <head>
+        <meta charset = "UTF-8"/>
+        <title>Jogo da Velha</title>
+        <script>
+            var jogada = 1;
+            var vencedor = -1;
+
+            function checaInput(objeto){
+                document.getElementById('msg').innerHTML = jogada;
+                if(jogada%2 == 1 && objeto.value == 'X'){
+                    jogada++;
+                    objeto.setAttribute("readonly", "readonly");
+                    checaJogo();
+                }else if(jogada%2 == 0 && objeto.value == '0'){
+                    jogada++;
+                    objeto.setAttribute("readonly", "readonly");
+                    checaJogo();
+                }else{
+                    objeto.value = "";
+                    alert('Jogada Invalida!');
+                }
+            }
+
+            function checaJogo(){
+                objetoAA = document.getElementById('a:a').value;
+                objetoAB = document.getElementById('a:b').value;
+                objetoAC = document.getElementById('a:c').value;
+
+                objetoBA = document.getElementById('b:a').value;
+                objetoBB = document.getElementById('b:b').value;
+                objetoBC = document.getElementById('b:c').value;
+
+                objetoCA = document.getElementById('c:a').value;
+                objetoCB = document.getElementById('c:b').value;
+                objetoCC = document.getElementById('c:c').value;
+
+                if(colineares(objetoAA, objetoAB, objetoAC) ||
+                    colineares(objetoBA, objetoBB, objetoBC) ||
+                    colineares(objetoCA, objetoCB, objetoCC) ||
+                    colineares(objetoAA, objetoBA, objetoCA) ||
+                    colineares(objetoAB, objetoBB, objetoCB) ||
+                    colineares(objetoAC, objetoBC, objetoCC) ||
+                    colineares(objetoAA, objetoBB, objetoCC) ||
+                    colineares(objetoAC, objetoBB, objetoCA)){
+                        alert('O vencedor é o ' + vencedor);
+                        window.location.reload();
+                }else if(jogada == 10){
+                    alert('O jogo empatou !');
+                    window.location.reload();
+                }
+            }
+
+            function colineares(elementoA, elementoB, elementoC){
+                if(elementoA == "" || elementoB == "" || elementoC == ""){
+                    return false;
+                }
+                if(elementoA == elementoB && elementoB == elementoC){
+                    vencedor = elementoA;
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+
+        </script>
+        <style>
+            input{
+                width: 100px;
+                height: 100px;
+                text-align: center;
+                font-size: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style = "text-align: center;">Jogada número: <spam id = "msg">1</spam></h1>
+        <form name = "form" if = "form">
+        <table align = "center">
+            <tr>
+                <td>
+                    <input type = "text" name = "a:a" id = "a:a" onchange = "checaInput(this);"/>
+                </td>
+                <td>
+                    <input type = "text" name = "a:b" id = "a:b" onchange = "checaInput(this);"/>
+                </td>
+                <td>
+                    <input type = "text" name = "a:c" id = "a:c" onchange = "checaInput(this);"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type = "text" name = "b:a" id = "b:a" onchange = "checaInput(this);"/>
+                </td>
+                <td>
+                    <input type = "text" name = "b:b" id = "b:b" onchange = "checaInput(this);"/>
+                </td>
+                <td>
+                    <input type = "text" name = "b:c" id = "b:c" onchange = "checaInput(this);"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type = "text" name = "c:a" id = "c:a" onchange = "checaInput(this);"/>
+                </td>
+                <td>
+                    <input type = "text" name = "c:b" id = "c:b" onchange = "checaInput(this);"/>
+                </td>
+                <td>
+                    <input type = "text" name = "c:c" id = "c:c" onchange = "checaInput(this);"/>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
